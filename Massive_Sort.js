@@ -9,7 +9,7 @@ const poorsQuantity = students.filter((students) => students.mark === 2).length;
 const fivers = students.some((students) => students.mark === 5);
 const marksArray = students.map((students) => students.mark);
 const sum = students.reduce(
-  (accumulator, currentValue) => accumulator + currentValue.mark,
+  (acc, currentValue) => acc + currentValue.mark,
   0
 );
 const averageMark = sum / marksArray.length;
