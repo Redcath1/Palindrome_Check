@@ -8,7 +8,10 @@ const students = [
 const poorsQuantity = students.filter((students) => students.mark === 2).length;
 const fivers = students.some(students => students.mark === 5);
 const massiveMarks = students.map(students => students.mark);
-const sum = students.reduce()
+let sum = 0
+for (let i = 0; i < massiveMarks.length; i++) {
+  sum += massiveMarks[i];
+}
 const averageMark = sum / massiveMarks.length;
 
 console.log("количество двоечников", poorsQuantity);
