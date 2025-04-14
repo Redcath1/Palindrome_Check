@@ -15,7 +15,7 @@ const sum = students.reduce(
 const averageMark = sum / marksArray.length;
 const isEver = marksArray.every((student) => students.mark === 2);
 console.log("количество двоечников", poorsQuantity);
-console.log("есть ли отличники", Count);
+console.log("есть ли отличники", fiversCount);
 console.log("средняя оценка", averageMark);
 console.log(isEver);
 console.log('тест гита с накаченной нодой')
