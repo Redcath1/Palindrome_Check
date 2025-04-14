@@ -6,7 +6,7 @@ const students = [
   { id: 5, name: "Alex", mark: 2 },
 ];
 const poorsQuantity = students.filter((students) => students.mark === 2).length;
-const fivers = students.some((students) => students.mark === 5);
+const fiversCount = students.some((students) => students.mark === 5);
 const marksArray = students.map((students) => students.mark);
 const sum = students.reduce(
   (acc, currentValue) => acc + currentValue.mark,
@@ -15,7 +15,7 @@ const sum = students.reduce(
 const averageMark = sum / marksArray.length;
 const isEver = marksArray.every((student) => students.mark === 2);
 console.log("количество двоечников", poorsQuantity);
-console.log("есть ли отличники", fivers);
+console.log("есть ли отличники", fiversCount);
 console.log("средняя оценка", averageMark);
 console.log(isEver);
 console.log('тест гита с накаченной нодой')
