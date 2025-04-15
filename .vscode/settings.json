@@ -1,7 +1,13 @@
 {
     "workbench.colorCustomizations": {
+<<<<<<< Updated upstream
         "activityBar.background": "#1F2C51",
         "titleBar.activeBackground": "#2B3D71",
         "titleBar.activeForeground": "#FAFBFD"
+=======
+        "activityBar.background": "#04351B",
+        "titleBar.activeBackground": "#064B26",
+        "titleBar.activeForeground": "#F0FEF7"
+>>>>>>> Stashed changes
     }
 }
