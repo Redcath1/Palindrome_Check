@@ -10,12 +10,12 @@ const fiversCount = students.some((students) => students.mark === 5);
 const marksArray = students.map((students) => students.mark);
 const sum = students.reduce((acc, currentValue) => acc + currentValue.mark, 0);
 const averageMark = sum / marksArray.length;
-const isEver = marksArray.every((student) => students.mark === 2);
+const isEver = students.every(students => students.mark === 2);
 function allHaveMark(students, mark) {
   for (let i = 0; i < students.length; i++) {
-    if (students[i].mark !== 2);
+    if (students[i].mark !== 2)
     {
-      return false;
+      return false
     }
   }
   return true;
@@ -23,7 +23,7 @@ function allHaveMark(students, mark) {
 console.log("количество двоечников", poorsQuantity);
 console.log("есть ли отличники", fiversCount);
 console.log("средняя оценка", averageMark);
-console.log("проверка с ever", isEver);
+console.log("проверка с every", isEver);
 console.log("Все ли двоечники через цикл", allHaveMark(students, 2));
 //Сколько двоечников? Есть ли отличники/двоечники? Средний балл? являются ли все двоечниками?
 //двоечники через цикл
