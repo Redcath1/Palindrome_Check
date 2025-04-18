@@ -13,7 +13,7 @@ const averageMark = sum / marksArray.length;
 const isEver = students.every((students) => students.mark === 2);
 function allHaveMark(students, mark) {
   for (let i = 0; i < students.length; i++) {
-    if (students[i].mark !== 2) {
+    if (students[i].mark !== mark) {
       return false;
     }
   }
