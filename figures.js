@@ -9,6 +9,7 @@ function triangle(sym, size) {
   return result;
 }
 console.log(triangle("*", 5));
+/*
 function isoscalesTriangle(sym, size) {
     let result = ""
     for (let i = 0; i < size; i++) {
@@ -21,3 +22,4 @@ function isoscalesTriangle(sym, size) {
         }
         
     }
+*/
