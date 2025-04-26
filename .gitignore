@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 .vscode/launch.json
-=======
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos
 
@@ -66,6 +64,5 @@ $RECYCLE.BIN/
 .vscode
 launch.json
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos
->>>>>>> 95d89dfc96163f34f54218f5f9a371727e7cefa5
 .vscode/settings.json
 /.vscode
