@@ -1,7 +1,7 @@
 function triangle(sym, size) {
   let result = "";
   for (let i = 0; i < size; i++) {
-    for (let x = 0; x <= i; x++) {
+    for (let k = 0; k <= i; k++) {
       result += sym;
     }
     result += "\n";
@@ -12,8 +12,8 @@ function triangle(sym, size) {
 function triangle(sym, size) {
   let result = "";
   for (let i = 0; i < size; i++) {
-    for (let x = 0; x <= i; x++) {
-      if (i === 0 || i === size - 1 || x === 0 || x === i) {
+    for (let k = 0; k <= i; k++) {
+      if (i === 0 || i === size - 1 || k === 0 || k === i) {
         result += sym;
       } else {
         result += " ";
