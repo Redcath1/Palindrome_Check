@@ -45,7 +45,7 @@ function triangle(sym, size) {
 }
 
 console.log(triangle("*", 5));
-*/
+
 //оптимизированная версия
 
 function triangle(sym, size) {
@@ -61,4 +61,26 @@ function triangle(sym, size) {
   }
   return result;
 }
-console.log(triangle("#", 5));
+*/
+function diamond(sym, size) {
+  let result = "";
+  const center = size - 1;
+  for (let i = 0; i < size; i++) {
+    const left = center - i;
+    const right = center + i;
+    for (let k = 0; k <= right; k++) {
+      result += (k === left || k === right) ? sym : " ";
+    }
+    result += "\n";
+  }
+  for (let i = size - 2; i >= 0; i--) {
+    const left = center - i;
+    const right = center + i;
+    for (let k = 0; k <= right; k++) {
+      result += (k === left || k === right) ? sym : " ";
+    }
+    result += "\n";
+  }
+  return result;
+}
+console.log(diamond("#", 5));
