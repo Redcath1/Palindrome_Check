@@ -1,25 +1,86 @@
-function triangle(sym, size) {
+/*function triangle(sym, size) {
   let result = "";
   for (let i = 0; i < size; i++) {
-    for (let x = 0; x <= i; x++) {
+    for (let k = 0; k <= i; k++) {
       result += sym;
     }
     result += "\n";
   }
   return result;
 }
-console.log(triangle("*", 5));
-/*
-function isoscalesTriangle(sym, size) {
-    let result = ""
-    for (let i = 0; i < size; i++) {
-        for (let x = 0; x <= i; x++) {
-            for (let k = 0; k < array.length; k++) {
-                const element = array[k];
-                
-            };
-            
-        }
-        
+// пустой внутри треугольник
+function triangle(sym, size) {
+  let result = "";
+  for (let i = 0; i < size; i++) {
+    for (let k = 0; k <= i; k++) {
+      if (i === 0 || i === size - 1 || k === 0 || k === i) {
+        result += sym;
+      } else {
+        result += " ";
+      }
     }
+    result += "\n";
+  }
+  return result;
+}
+console.log(triangle("*", 5));
+
+//пустой внутри равнобедренный треугольник
+function triangle(sym, size) {
+  let result = "";
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size - i - 1; j++) {
+      result += " ";
+    }
+    for (let k = 0; k < 2 * i + 1; k++) {
+      if (i === 0 || i === size - 1 || k === 0 || k === 2 * i) {
+        result += sym;
+      } else {
+        result += " ";
+      }
+    }
+    result += "\n";
+  }
+  return result;
+}
+
+console.log(triangle("*", 5));
+
+//оптимизированная версия
+
+function triangle(sym, size) {
+  let result = "";
+  const center = size - 1;
+  for (let i = 0; i < size; i++) {
+    const left = center - i;
+    const right = center + i;
+    for (let k = 0; k <= right; k++) {
+      result += k === left || k === right || i === size - 1 ? sym : " ";
+    }
+    result += "\n";
+  }
+  return result;
+}
 */
+function diamond(sym, size) {
+  let result = "";
+  const center = size - 1;
+  for (let i = 0; i < size; i++) {
+    const left = center - i;
+    const right = center + i;
+    for (let k = 0; k <= right; k++) {
+      result += (k === left || k === right) ? sym : " ";
+    }
+    result += "\n";
+  }
+  for (let i = size - 2; i >= 0; i--) {
+    const left = center - i;
+    const right = center + i;
+    for (let k = 0; k <= right; k++) {
+      result += (k === left || k === right) ? sym : " ";
+    }
+    result += "\n";
+  }
+  return result;
+}
+console.log(diamond("#", 5));
